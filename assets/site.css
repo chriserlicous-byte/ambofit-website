@@ -645,3 +645,51 @@ h1, h2, h3 {
   .doc :is(th, td):first-child:nth-last-child(3) { width: 31%; }
   .doc :is(th, td):nth-child(3):last-child { width: 31%; }
 }
+
+/* Fortschritt und Insights: drei Telefone, auf dem Handy eins groß und zwei darunter */
+
+.gallery-phones {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: start;
+  gap: clamp(14px, 3vw, 44px);
+  max-width: 1080px;
+  margin: clamp(48px, 7vw, 88px) auto 0;
+}
+.gallery-phones::before {
+  content: "";
+  position: absolute;
+  inset: 5% 0;
+  z-index: -1;
+  border-radius: 50%;
+  filter: blur(40px);
+  background: radial-gradient(closest-side, rgba(255, 122, 69, 0.18), transparent);
+}
+.gallery-phones .phone { width: 100%; }
+.gallery-phones .phone-center { grid-column: 1 / -1; order: -1; width: min(76vw, 330px); }
+.gallery-phones .phone-side { max-width: 290px; }
+@media (min-width: 820px) {
+  .gallery-phones { grid-template-columns: 1fr 1.14fr 1fr; }
+  .gallery-phones .phone-center { grid-column: auto; order: 0; width: 100%; max-width: 330px; }
+  .gallery-phones .phone-side { margin-top: 72px; }
+}
+
+.tiles {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: clamp(40px, 6vw, 64px);
+}
+@media (min-width: 700px) { .tiles { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1080px) { .tiles { grid-template-columns: repeat(4, 1fr); } }
+.tile {
+  padding: 24px 24px 26px;
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.tile h3 { font-size: 1.125rem; font-weight: 650; letter-spacing: -0.01em; line-height: 1.3; }
+.tile p { margin: 8px 0 0; color: var(--text-2); font-size: 0.9375rem; line-height: 1.5; }
