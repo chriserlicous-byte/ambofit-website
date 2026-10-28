@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'; manifest-src 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'; manifest-src 'self'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>ambofit – Train and eat for the same goal</title>
 <meta name="description" content="Workouts and food in one iPhone app that connects them: a calorie goal that learns your burn, progression that tells you when to go heavier, and a weekly check-in that reads both.">
@@ -25,6 +25,7 @@
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="/assets/site.css?v=a2ffbbf988">
+<script src="/assets/currency.js?v=a4f86347f0" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -43,12 +44,12 @@
       <span class="button button-soon">Coming soon to the App Store</span>
       <a class="button button-ghost" href="#pricing">See plans</a>
     </div>
-    <p class="fineprint">Every plan starts with 7 days free. Plans from €4.99 a month.</p>
+    <p class="fineprint">Every plan starts with 7 days free. Plans from <span data-price="from">€3.00</span> a month, billed yearly.</p>
 
     <div class="hero-phones">
       <figure class="phone phone-side"><img src="/assets/img/03-workout-560.webp" srcset="/assets/img/03-workout-560.webp 560w, /assets/img/03-workout-980.webp 980w" sizes="(min-width: 820px) 290px, 44vw" width="980" height="2000" loading="lazy" decoding="async" alt="ambofit during a workout: the first two of four Back Squat sets at 97.5 kg for 8 reps are ticked off, with the rest timer at the bottom showing 1:58."></figure>
       <figure class="phone"><img src="/assets/img/01-today-560.webp" srcset="/assets/img/01-today-560.webp 560w, /assets/img/01-today-980.webp 980w" sizes="(min-width: 820px) 330px, 76vw" width="980" height="2000" loading="eager" fetchpriority="high" decoding="async" alt="ambofit Today screen: today&#x27;s workout Lower 1 with a Start button, 854 kcal left with bars for protein, carbs and fat, and a falling weight trend at 81.1 kg."></figure>
-      <figure class="phone phone-side"><img src="/assets/img/05-nutrition-560.webp" srcset="/assets/img/05-nutrition-560.webp 560w, /assets/img/05-nutrition-980.webp 980w" sizes="(min-width: 820px) 290px, 44vw" width="980" height="2000" loading="lazy" decoding="async" alt="ambofit Nutrition screen: a coached goal of 2,280 kcal to lose fat to 80 kg, 854 kcal left and 1,426 of 2,280 kcal eaten."></figure>
+      <figure class="phone phone-side"><img src="/assets/img/10-progressing-560.webp" srcset="/assets/img/10-progressing-560.webp 560w, /assets/img/10-progressing-980.webp 980w" sizes="(min-width: 820px) 290px, 44vw" width="980" height="2000" loading="lazy" decoding="async" alt="ambofit Progress, right now in the last 4 weeks: progressing 18 of 18 lifts, for example Hack Squat plus 15 kg and 1 rep, from 130 kg for 8, 7, 8 reps to 145 kg for 8, 8, 8, and Back Squat plus 5 kg and 1 rep."></figure>
     </div>
   </div>
 </section>
@@ -155,14 +156,14 @@
       <p class="lead">Every set and every meal feeds your insights. See which lifts are moving, where your strength is heading, and whether pace, protein and logging are on track.</p>
     </div>
     <div class="gallery-phones">
-      <figure class="phone phone-side"><img src="/assets/img/10-progressing-560.webp" srcset="/assets/img/10-progressing-560.webp 560w, /assets/img/10-progressing-980.webp 980w" sizes="(min-width: 820px) 290px, 44vw" width="980" height="2000" loading="lazy" decoding="async" alt="ambofit Progress, right now in the last 4 weeks: progressing 18 of 18 lifts, for example Hack Squat plus 15 kg and 1 rep, from 130 kg for 8, 7, 8 reps to 145 kg for 8, 8, 8, and Back Squat plus 5 kg and 1 rep."></figure>
+      <figure class="phone phone-side"><img src="/assets/img/12-records-560.webp" srcset="/assets/img/12-records-560.webp 560w, /assets/img/12-records-980.webp 980w" sizes="(min-width: 820px) 290px, 44vw" width="980" height="2000" loading="lazy" decoding="async" alt="ambofit Progress, all time: records with 4 new bests in the last 7 days, Back Squat and Hack Squat plus 6 kg, and all-time bests such as Back Squat 124 kg, Bench Press 97 kg and Romanian Deadlift 112 kg."></figure>
       <figure class="phone phone-center"><img src="/assets/img/09-insights-560.webp" srcset="/assets/img/09-insights-560.webp 560w, /assets/img/09-insights-980.webp 980w" sizes="(min-width: 820px) 330px, 76vw" width="980" height="2000" loading="lazy" decoding="async" alt="ambofit insights on Today: strength up 7 kg in 3 months for Triceps Pushdown and Bench Press, strength vs. weight minus 1.3 and plus 2.1 percent, 18 of 18 lifts progressing, goal pace minus 0.4 kg a week on plan, protein 1.8 g per kg, 6 of 7 days fully logged, 4 new records."></figure>
       <figure class="phone phone-side"><img src="/assets/img/11-strength-trend-560.webp" srcset="/assets/img/11-strength-trend-560.webp 560w, /assets/img/11-strength-trend-980.webp 980w" sizes="(min-width: 820px) 290px, 44vw" width="980" height="2000" loading="lazy" decoding="async" alt="ambofit Progress, Training: Back Squat estimated one-rep max 124 kg, plus 13 kg in 3 months, as a rising line chart."></figure>
     </div>
     <div class="tiles">
       <article class="tile">
-        <h3>Progressing</h3>
-        <p>Every lift in your plan that gained weight or reps in the last 4 weeks, with before and after.</p>
+        <h3>Progressing and records</h3>
+        <p>Every lift that gained weight or reps in the last 4 weeks, new bests of the week and your all-time best for each lift.</p>
       </article>
       <article class="tile">
         <h3>Insights on Today</h3>
@@ -208,8 +209,8 @@
       <article class="plan" aria-labelledby="plan-basic">
         <h3 id="plan-basic">Basic</h3>
         <p class="plan-for">Everything to train and eat for your goal.</p>
-        <p class="price"><b>€35.99</b><span>a year</span><span class="save">save 40&nbsp;%</span></p>
-        <p class="price-alt">That’s €3.00 a month. Or €4.99 billed monthly.</p>
+        <p class="price"><b data-price="basic-year">€35.99</b><span>a year</span><span class="save" data-price="basic-save">save 40&nbsp;%</span></p>
+        <p class="price-alt">That’s <span data-price="basic-year-month">€3.00</span> a month. Or <span data-price="basic-month">€4.99</span> billed monthly.</p>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#3DDBB0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Plans, workout logging and rest timer</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#3DDBB0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Food log with search, barcode and label scan</span></li>
@@ -223,8 +224,8 @@
         <span class="badge">Most complete</span>
         <h3 id="plan-pro">Pro</h3>
         <p class="plan-for">Let ambofit set your weights and log meals from a photo.</p>
-        <p class="price"><b>€59.99</b><span>a year</span><span class="save">save 50&nbsp;%</span></p>
-        <p class="price-alt">That’s €5.00 a month. Or €9.99 billed monthly.</p>
+        <p class="price"><b data-price="pro-year">€59.99</b><span>a year</span><span class="save" data-price="pro-save">save 50&nbsp;%</span></p>
+        <p class="price-alt">That’s <span data-price="pro-year-month">€5.00</span> a month. Or <span data-price="pro-month">€9.99</span> billed monthly.</p>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#3DDBB0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Everything in Basic</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#3DDBB0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Auto-adjust weights after every exercise</span></li>
@@ -235,7 +236,7 @@
     </div>
 
     <div class="pricing-notes">
-      <p>Prices in euros including VAT. In the US: $4.99 a month or $35.99 a year for Basic, $9.99 a month or $59.99 a year for Pro. Elsewhere, the App Store shows your local price before you subscribe. “Save” compares 12 monthly payments with the yearly price.</p>
+      <p><span data-price="note">Prices in euros including VAT.</span> The App Store shows the price for your country before you subscribe. “Save” compares 12 monthly payments with the yearly price.</p>
       <p>The free week is for new subscribers. Payment is charged to your Apple Account when the free week ends. Subscriptions renew automatically unless cancelled at least 24 hours before the end of the current period. Manage or cancel them in your Apple Account settings. <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use (Apple’s standard EULA)</a> · <a href="/privacy/">Privacy Policy</a></p>
     </div>
   </div>
