@@ -39,16 +39,16 @@
 <main id="main">
 <div class="wrap"><article class="doc">
 <h1>Privacy Policy</h1>
-<p class="doc-meta">ambofit app and ambofit.com · Last updated: 27 October 2026</p>
+<p class="doc-meta">ambofit app and ambofit.com · Last updated: 3 November 2026</p>
 <p class="lang-switch"><a href="/datenschutz/" hreflang="de" lang="de">Diese Seite auf Deutsch</a></p>
 
 <section class="summary" aria-labelledby="short">
   <h2 id="short">The short version</h2>
   <ul>
     <li>ambofit needs <strong>no account</strong>. Your workouts, food, weight and body data stay <strong>on your iPhone</strong> and, if you use iCloud, <strong>in your private iCloud</strong>. We can’t access them.</li>
-    <li>Only what a feature needs goes online: the number of a scanned barcode and, after you agree, an AI photo with an optional note.</li>
-    <li>We don’t store photos or notes. Google doesn’t use them to train its AI.</li>
-    <li>No ads, no analytics or tracking services and no cookies, neither in the app nor on the website.</li>
+    <li>Only what a feature needs goes online: the number of a scanned barcode and, after you agree, an AI photo with an optional note or, for voice logging, the text of what you said. The voice recording itself stays on your iPhone.</li>
+    <li>We don’t store photos, notes or texts. Google doesn’t use them to train its AI.</li>
+    <li>No ads, no tracking and no cookies. The app only sends anonymous usage stats if you agree, and never with your workouts, food, weight or body data.</li>
     <li>Subscriptions run through Apple. We never receive payment details, your name or your Apple ID.</li>
   </ul>
 </section>
@@ -60,7 +60,7 @@
     <li><a href="#device">Data in the app</a></li>
     <li><a href="#icloud">Sync with iCloud</a></li>
     <li><a href="#barcode">Food search and barcodes</a></li>
-    <li><a href="#ai-photo">AI photo</a></li>
+    <li><a href="#ai-photo">AI photo and voice logging</a></li>
     <li><a href="#subscriptions">Subscriptions and purchase check</a></li>
     <li><a href="#apple-reports">Crash reports and beta tests</a></li>
     <li><a href="#no-tracking">No tracking, no ads</a></li>
@@ -88,6 +88,7 @@
 <ul>
   <li><strong>Camera:</strong> your iPhone itself reads barcodes and nutrition labels (iOS text recognition). A photo of a nutrition label never leaves your device.</li>
   <li><strong>Photos:</strong> if you pick a picture from your library, the iOS photo picker gives the app only that one picture.</li>
+  <li><strong>Microphone and speech recognition:</strong> for voice logging, your iPhone turns what you say into text with Apple’s speech recognition on the device. The recording never leaves your iPhone, isn’t sent to Apple or to us, and isn’t stored. Only the text goes on (section 5).</li>
   <li><strong>Rest timer:</strong> the Lock Screen display (Live Activity), the rest sound and the notification when rest is over are created on your iPhone. No data is sent for this.</li>
   <li><strong>Export:</strong> the CSV export is created on your device. You decide where the files go in the iOS share sheet.</li>
 </ul>
@@ -109,17 +110,18 @@
 <p>Open Food Facts processes the request under its own responsibility; its <a href="https://world.openfoodfacts.org/privacy">privacy policy</a> applies. For barcode requests, our server only keeps the technical server logs (section 13).</p>
 <p class="basis">Legal basis: Art. 6 (1) (b) GDPR (the product lookup you ask for); for server logs Art. 6 (1) (f) GDPR (legitimate interest in security and troubleshooting).</p>
 
-<h2 id="ai-photo">5. AI photo</h2>
+<h2 id="ai-photo">5. AI photo and voice logging</h2>
 <p>With AI photo you take a picture of a meal or pick one, and an AI estimates the foods, amounts and nutrients. Before your first AI photo, the app explains what happens and asks for your consent. AI photo is for people 18 and older. Please only photograph food, not people or documents.</p>
-<p><strong>Data sent:</strong> the photo, your optional note for the AI (up to 200 characters, for example “fried in butter”), your device’s time zone (for the daily limit) and Apple’s signed purchase confirmation for your subscription (section 6). To show how many photos you have left, the app asks for the current count; only the purchase confirmation and time zone are sent for that. For a correction (up to 2 per photo, for example “It was 3 eggs”), the same photo, the list with your amounts and your correction are sent to the server again.</p>
-<p><strong>How it works:</strong> the app sends the data to our server function at <strong>Supabase</strong> in Frankfurt am Main. The server checks your subscription using Apple’s signature, counts the photo and forwards the photo and note to <strong>Google Gemini</strong>. Gemini recognizes the foods; the result goes back to the app, where you check it before anything is saved.</p>
-<p><strong>What is stored:</strong> we don’t store the photo, the note or the correction. For the limit (Pro: 10 photos a day, Basic: 3 to try), the server stores only the number of photos per subscription, identified by Apple’s original transaction ID (a pseudonymous ID of your subscription): per day for 2 days, then as one total per subscription. The total is deleted 12 months after your last AI photo. For corrections, it keeps a random photo ID, the transaction ID, a checksum of the photo (SHA-256 hash, from which the photo can’t be restored) and the number of corrections; corrections are possible for 60 minutes and the entry is deleted after 2 days. The server log contains only numbers: plan, number of foods recognized, whether there was a note, AI model, processing effort and cost.</p>
-<p><strong>Google:</strong> Google processes the photo and note on our behalf. For the paid Gemini API, Google’s terms say it doesn’t use prompts and responses to improve its products or train AI models, and keeps them only for a limited time to detect abuse and meet legal obligations. Processing outside the EU, for example in the US, is possible (section 12).</p>
-<p class="basis">Legal basis: your consent (Art. 6 (1) (a) GDPR; where a photo or note reveals something about your health, Art. 9 (2) (a) GDPR) and providing the feature you ask for (Art. 6 (1) (b) GDPR); for the limit and logs also Art. 6 (1) (f) GDPR (preventing abuse). You can withdraw your consent at any time with effect for the future by no longer using AI photo (nothing is sent without your photo) or by writing to <a href="mailto:privacy@ambofit.com">privacy@ambofit.com</a>.</p>
+<p><strong>Voice logging:</strong> you say or type what you ate, for example “two eggs and a slice of toast”. Your iPhone turns speech into text on the device (section 2); you can check and change the text before you send it. Only the text goes to our server and to Google Gemini, in the same way as a photo, and you get the same list to check. Before your first voice log, the app asks for your consent separately. Voice logging is for people 18 and older. Photos and voice logs share one limit (“AI logs”).</p>
+<p><strong>Data sent:</strong> the photo, your optional note for the AI (up to 200 characters, for example “fried in butter”) or, for voice logging, the text of what you said or typed (up to 500 characters), your device’s time zone (for the daily limit) and Apple’s signed purchase confirmation for your subscription (section 6). To show how many AI logs you have left, the app asks for the current count; only the purchase confirmation and time zone are sent for that. For a correction (up to 2 per photo or voice log, for example “It was 3 eggs”), the same photo or text, the list with your amounts and your correction are sent to the server again.</p>
+<p><strong>How it works:</strong> the app sends the data to our server function at <strong>Supabase</strong> in Frankfurt am Main. The server checks your subscription using Apple’s signature, counts the photo or voice log and forwards the photo and note, or the text, to <strong>Google Gemini</strong>. Gemini recognizes the foods; the result goes back to the app, where you check it before anything is saved.</p>
+<p><strong>What is stored:</strong> we don’t store the photo, the note, the text or the correction. For the limit (Pro: 10 AI logs a day, Basic: 3 to try, photos and voice together), the server stores only the number of AI logs per subscription, identified by Apple’s original transaction ID (a pseudonymous ID of your subscription): per day for 2 days, then as one total per subscription. The total is deleted 12 months after your last AI log. For corrections, it keeps a random ID, the transaction ID, a checksum of the photo or text (SHA-256 hash, from which neither can be restored) and the number of corrections; corrections are possible for 60 minutes and the entry is deleted after 2 days. The server log contains only numbers: plan, number of foods recognized, whether there was a note, AI model, processing effort and cost.</p>
+<p><strong>Google:</strong> Google processes the photo and note, or the text, on our behalf. For the paid Gemini API, Google’s terms say it doesn’t use prompts and responses to improve its products or train AI models, and keeps them only for a limited time to detect abuse and meet legal obligations. Processing outside the EU, for example in the US, is possible (section 12).</p>
+<p class="basis">Legal basis: your consent (Art. 6 (1) (a) GDPR; where a photo, note or text reveals something about your health, Art. 9 (2) (a) GDPR) and providing the feature you ask for (Art. 6 (1) (b) GDPR); for the limit and logs also Art. 6 (1) (f) GDPR (preventing abuse). You can withdraw your consent at any time with effect for the future by no longer using AI photo and voice logging (nothing is sent without your photo or text) or by writing to <a href="mailto:privacy@ambofit.com">privacy@ambofit.com</a>.</p>
 
 <h2 id="subscriptions">6. Subscriptions and purchase check</h2>
 <p>ambofit requires a subscription (Basic or Pro), which you buy through Apple’s <strong>App Store</strong>. Apple handles the purchase, payment, free trial and renewals. We never receive payment details, your name or your Apple ID. The app checks which subscription is active on your device using Apple’s purchase interface (StoreKit).</p>
-<p>Only for AI photo does the app send Apple’s signed purchase confirmation to our server. Among other things, it contains transaction IDs, the product, purchase and expiry dates, whether a free trial is running, the App Store country, and the price and currency. If Apple couldn’t charge a renewal and a billing grace period is running, Apple’s signed renewal info with the end of the grace period is added. The server checks Apple’s signatures and uses only the plan, expiry date or end of the grace period, trial status and original transaction ID to check the limit (section 5).</p>
+<p>Only for AI photo and voice logging does the app send Apple’s signed purchase confirmation to our server. Among other things, it contains transaction IDs, the product, purchase and expiry dates, whether a free trial is running, the App Store country, and the price and currency. If Apple couldn’t charge a renewal and a billing grace period is running, Apple’s signed renewal info with the end of the grace period is added. The server checks Apple’s signatures and uses only the plan, expiry date or end of the grace period, trial status and original transaction ID to check the limit (section 5).</p>
 <p>Apple also provides us with sales reports and statistics in App Store Connect, for example the number of subscriptions per country. We can’t identify you from them.</p>
 <p class="basis">Legal basis: Art. 6 (1) (b) GDPR. Apple’s terms and privacy policy apply to the purchase.</p>
 
@@ -129,7 +131,9 @@
 <p class="basis">Legal basis: Art. 6 (1) (f) GDPR (legitimate interest in an app without bugs); you allow the sharing with us through Apple.</p>
 
 <h2 id="no-tracking">8. No tracking, no ads</h2>
-<p>The app contains no ads and no third-party analytics, tracking or advertising code. It doesn’t track you across other companies’ apps and websites, and we don’t sell data. ambofit also doesn’t read or write data in Apple Health.</p>
+<p>The app contains no ads and no third-party tracking or advertising code. It doesn’t track you across other companies’ apps and websites, and we don’t sell data. ambofit also doesn’t read or write data in Apple Health.</p>
+<p><strong>Anonymous usage stats, only with your consent:</strong> After your first workout, the app asks once whether it may count anonymously what works. You can change this any time under Settings → Data → “Anonymous usage stats”. Only if you agree does the app send events to <strong>TelemetryDeck</strong> (TelemetryDeck GmbH, Germany; servers in the EU): which screens and features you use, for example “workout finished”, “food logged by barcode” or “paywall shown”, as categories and rounded numbers (such as the duration in 10-minute steps), plus app version, iOS version, device type and language. An identifier that is hashed on your iPhone lets us count use across several days without knowing who you are. We never send workouts, weights, calories, body data, food names, notes, your Apple ID or any other free text. Events from before your answer stay on your iPhone and are only sent once you agree; with “No thanks” they are deleted.</p>
+<p class="basis">Legal basis: your consent (Art. 6 (1) (a) GDPR, § 25 (1) TDDDG). You can withdraw it at any time with effect for the future in the settings.</p>
 
 <h2 id="email">9. Contact by email</h2>
 <p>When you write to <a href="mailto:support@ambofit.com">support@ambofit.com</a> or <a href="mailto:privacy@ambofit.com">privacy@ambofit.com</a>, we process your email address, your name (if given) and your message to reply to you. Our email provider <strong>INWX</strong> (INWX GmbH, Berlin, Germany) receives the messages and forwards them to our mailbox at <strong>Google (Gmail)</strong>, where we read and answer them. We delete messages 2 years after your request is closed, unless legal retention periods require otherwise.</p>
@@ -147,16 +151,17 @@
     <thead><tr><th scope="col">Provider</th><th scope="col">Purpose</th><th scope="col">Where data is processed</th></tr></thead>
     <tbody>
       <tr><td>Apple (App Store, iCloud)</td><td>Download, subscriptions and payment; sync in your iCloud; crash reports and TestFlight</td><td>see Apple’s Privacy Policy</td></tr>
-      <tr><td>Supabase Pte. Ltd. (Singapore)</td><td>Server for AI photo, limits and USDA product data</td><td>Data center in Frankfurt am Main (EU)</td></tr>
-      <tr><td>Google (Gemini API)</td><td>Recognizing foods for AI photo</td><td>EU and other countries, including the US</td></tr>
+      <tr><td>Supabase Pte. Ltd. (Singapore)</td><td>Server for AI photo, voice logging, limits and USDA product data</td><td>Data center in Frankfurt am Main (EU)</td></tr>
+      <tr><td>Google (Gemini API)</td><td>Recognizing foods for AI photo and voice logging</td><td>EU and other countries, including the US</td></tr>
       <tr><td>Open Food Facts (France)</td><td>Product data for barcodes</td><td>France (EU)</td></tr>
+      <tr><td>TelemetryDeck GmbH (Germany)</td><td>Anonymous usage stats, only with consent</td><td>EU</td></tr>
       <tr><td>GitHub, Inc. (USA)</td><td>Hosting this website (GitHub Pages)</td><td>US and other countries</td></tr>
       <tr><td>INWX GmbH (Germany)</td><td>Domain, receiving and forwarding email</td><td>Germany</td></tr>
       <tr><td>Google (Gmail)</td><td>Email mailbox</td><td>EU and other countries, including the US</td></tr>
     </tbody>
   </table>
 </div>
-<p>Supabase, Google (Gemini API) and INWX process data on our behalf under Art. 28 GDPR. Apple, Open Food Facts and GitHub process it under their own responsibility and privacy policies; Google’s terms and privacy policy apply to Gmail.</p>
+<p>Supabase, Google (Gemini API), TelemetryDeck and INWX process data on our behalf under Art. 28 GDPR. Apple, Open Food Facts and GitHub process it under their own responsibility and privacy policies; Google’s terms and privacy policy apply to Gmail.</p>
 
 <h2 id="transfers">12. Transfers outside the EU</h2>
 <p>Supabase Pte. Ltd. is based in Singapore; the data is stored in a data center in Frankfurt am Main. Google, GitHub and Apple are headquartered in the US. Access from these countries or processing there, including by sub-processors, can therefore not be ruled out. For Supabase, the EU Standard Contractual Clauses apply (Art. 46 (2) (c) GDPR) as part of the data processing agreement. For Google and GitHub, the European Commission’s adequacy decision for the EU-US Data Privacy Framework applies (Art. 45 GDPR) where the provider is certified, and otherwise also the Standard Contractual Clauses. For Apple, the safeguards described in Apple’s Privacy Policy apply.</p>
@@ -167,11 +172,12 @@
     <thead><tr><th scope="col">Data</th><th scope="col">How long</th></tr></thead>
     <tbody>
       <tr><td>Data in the app and in your iCloud</td><td>until you delete it, the app or the app’s iCloud data</td></tr>
-      <tr><td>AI photo: photo, note and correction</td><td>not stored on our server; at Google only briefly to detect abuse</td></tr>
-      <tr><td>AI photo: correction entry (random ID, transaction ID, photo checksum)</td><td>usable for 60 minutes, deleted after 2 days</td></tr>
-      <tr><td>AI photo: number of photos per subscription</td><td>per day for 2 days, then as a total until 12 months after the last AI photo, then deleted automatically</td></tr>
+      <tr><td>AI photo and voice: photo, note, text and correction</td><td>not stored on our server; at Google only briefly to detect abuse</td></tr>
+      <tr><td>AI photo and voice: correction entry (random ID, transaction ID, checksum of the photo or text)</td><td>usable for 60 minutes, deleted after 2 days</td></tr>
+      <tr><td>AI photo and voice: number of AI logs per subscription</td><td>per day for 2 days, then as a total until 12 months after the last AI log, then deleted automatically</td></tr>
       <tr><td>Server logs at Supabase (with IP address)</td><td>7 days at most</td></tr>
       <tr><td>Barcode requests at Open Food Facts</td><td>according to Open Food Facts’ privacy policy</td></tr>
+      <tr><td>Anonymous usage stats (TelemetryDeck)</td><td>according to TelemetryDeck’s retention periods, without reference to you</td></tr>
       <tr><td>Emails to us</td><td>2 years after the request is closed</td></tr>
       <tr><td>Website server logs (GitHub)</td><td>according to GitHub’s retention periods</td></tr>
       <tr><td>Crash reports and TestFlight details (Apple)</td><td>according to Apple’s retention periods</td></tr>
@@ -193,9 +199,9 @@
 
 <h2 id="more">15. More information</h2>
 <ul>
-  <li><strong>No obligation:</strong> you don’t have to give us any data. Without body data there is no calculated calorie goal, without the camera no scanning and without consent no AI photo.</li>
+  <li><strong>No obligation:</strong> you don’t have to give us any data. Without body data there is no calculated calorie goal, without the camera no scanning, without the microphone no speaking (typing still works) and without consent no AI photo or voice logging.</li>
   <li><strong>No automated decision-making</strong> within the meaning of Art. 22 GDPR: the app calculates your calorie goal on your device as a suggestion. A new goal only applies once you accept it.</li>
-  <li><strong>Age:</strong> ambofit is designed for adults. AI photo is for people 18 and older.</li>
+  <li><strong>Age:</strong> ambofit is designed for adults. AI photo and voice logging are for people 18 and older.</li>
   <li><strong>Security:</strong> all connections of the app and the website are encrypted (HTTPS/TLS). Our server only stores the counters and checksums named above.</li>
 </ul>
 
